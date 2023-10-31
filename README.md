@@ -1,4 +1,4 @@
-# Flutter Rows & Columns Samples with Flex, Expanded and Spacer Widgets
+# Flutter Rows & Columns Samples with Expanded, Flex and Spacer Widgets
 ## About
 This project is a collection of Flutter Row and Column samples with Flex, Expanded and Spacer widgets.
 It offers explanation and code samples for the following widgets:
@@ -55,6 +55,10 @@ As show below the spacer widget will occupy the space between the first and last
 Source code: [rows_spacer_flex_widget.dart](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/lib/widgets/rows/rows_spacer_flex_widget.dart)
 
 ## Columns
+### 1. Columns on main axis alignment (vertical)
+Column children can be aligned in the following ways:
+1. At the beginning of the column (MainAxisAlignment.start) This is the default arrangement of column items if no alignment is specified. Indicated by the 1st column in the image below.
+
 ## How to run the project
 1. Clone the project
 2. Use flutter version 3.13.3 or higher
