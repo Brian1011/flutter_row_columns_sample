@@ -11,60 +11,38 @@ class ColumnsMainAxisAlignment extends StatefulWidget {
 class _ColumnsMainAxisAlignmentState extends State<ColumnsMainAxisAlignment> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 600,
-      child: Column(
+    return const SizedBox(
+      height: 250,
+      child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black,
-                width: 2,
-              ),
-            ),
-            padding: const EdgeInsets.all(10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  color: Colors.red,
-                  height: 100,
-                  width: 100,
-                ),
-                Container(
-                  color: Colors.green,
-                  height: 100,
-                  width: 100,
-                ),
-                Container(
-                  color: Colors.blue,
-                  height: 100,
-                  width: 100,
-                ),
-              ],
-            ),
-          )
-          // places the children as close to the start of the row
-          /*CustomColumnWidget(
+          // Column with main axis alignment.
+          // The main axis alignment property is used to align the children of a column on the vertical axis.
+          // The default value is MainAxisAlignment.start, which places the children at the top of the column.
+          // The other values are MainAxisAlignment.center, MainAxisAlignment.end, and MainAxisAlignment.spaceBetween.
+          Expanded(
+              child: CustomColumnWidget(
             mainAxisAlignment: MainAxisAlignment.start,
-          ),
-
-          // places the children as close to the center of the row
-          CustomColumnWidget(
+            color: Colors.red,
+            text: "Start",
+          )),
+          Expanded(
+              child: CustomColumnWidget(
             mainAxisAlignment: MainAxisAlignment.center,
-          ),
-
-          // places the free space evenly between the children,
-          // you can use the spaceEvenly, spaceBetween, or spaceAround values for the mainAxisAlignment property
-          // to control the spacing between the children.
-          CustomColumnWidget(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          ),
-
-          // places the children as close to the end of the main axis as possible.
-          CustomColumnWidget(
+            color: Colors.green,
+            text: "Center",
+          )),
+          Expanded(
+              child: CustomColumnWidget(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            color: Colors.grey,
+            text: "SpaceBetween",
+          )),
+          Expanded(
+              child: CustomColumnWidget(
             mainAxisAlignment: MainAxisAlignment.end,
-          ),*/
+            color: Colors.blue,
+            text: "End",
+          )),
         ],
       ),
     );
@@ -73,32 +51,33 @@ class _ColumnsMainAxisAlignmentState extends State<ColumnsMainAxisAlignment> {
 
 class CustomColumnWidget extends StatelessWidget {
   final MainAxisAlignment mainAxisAlignment;
-  const CustomColumnWidget({super.key, required this.mainAxisAlignment});
+  final Color color;
+  final String text;
+  const CustomColumnWidget(
+      {super.key,
+      required this.mainAxisAlignment,
+      required this.color,
+      required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Row(
+    return Container(
+      padding: const EdgeInsets.all(10),
+      color: color,
+      height: 200,
+      child: Column(
+        mainAxisAlignment: mainAxisAlignment,
         children: [
-          Column(
-            mainAxisAlignment: mainAxisAlignment,
-            children: [
-              Container(
-                color: Colors.red,
-                width: 100,
-              ),
-              Container(
-                color: Colors.green,
-                width: 100,
-              ),
-              Container(
-                color: Colors.blue,
-                width: 100,
-              ),
-            ],
+          Text(
+            text,
+            style: const TextStyle(fontSize: 16, color: Colors.white),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 5),
+          const Text(
+            "Main Axis",
+            style: TextStyle(fontSize: 16, color: Colors.white),
+            textAlign: TextAlign.center,
+          )
         ],
       ),
     );

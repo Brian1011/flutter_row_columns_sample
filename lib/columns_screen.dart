@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rows_columns_spacer/widgets/columns/column_main_axis_alignment_widget.dart';
 
+import 'widgets/columns/column_expanded_flex_widget.dart';
+import 'widgets/columns/column_spacer_flex_widget.dart';
+
 class ColumnsScreen extends StatefulWidget {
   const ColumnsScreen({super.key});
 
@@ -28,19 +31,16 @@ class _ColumnsScreenState extends State<ColumnsScreen> {
             // align children on column axis (vertical)
             Divider(),
             Text(
-              "Rows with expanded and flex children",
+              "Columns with expanded and flex children",
               style: TextStyle(fontSize: 20),
               textAlign: TextAlign.center,
             ),
-            // arrange children with flex and expanded
-            //RowsExpandedFlexWidget(),
+            ColumnExpandedFlexWidget(),
+            // arrange children in column with expanded and flex
             Divider(),
-            Text("Rows with spacer and flex children",
+            Text("Column with spacer and flex children",
                 style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-            // RowsSpacerFlexWidget(),
-            Divider(),
-            Text("Handle long / overflow text in rows",
-                style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
+            ColumnSpacerFlexWidget(),
             // RowColumnLongTextWidget(),
           ],
         ),
