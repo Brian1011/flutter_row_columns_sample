@@ -18,10 +18,10 @@ Rows and Columns can be nested to create more complex layouts.
 ## Rows
 ### 1. Rows on main axis alignment (horizontal)
 Row children can be aligned in the following ways:
-* At the beginning of the row (MainAxisAlignment.start) This is the default arrangement of row items if no alignment is specified.
-* At the middle of the row (MainAxisAlignment.center)
-* Evenly spaced along the row (MainAxisAlignment.spaceEvenly)
-* At the end of the row (MainAxisAlignment.end)
+* At the beginning of the row (MainAxisAlignment.start) This is the default arrangement of row items if no alignment is specified. Indicated by the 1st row in the image below.
+* At the middle of the row (MainAxisAlignment.center). Indicated by the 2nd row in the image below.
+* Evenly spaced along the row (MainAxisAlignment.spaceEvenly). Indicated by the 3rd row in the image below.
+* At the end of the row (MainAxisAlignment.end). Indicated by the 4th row in the image below.
 
 [![Rows on main axis](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/images/rows_main_axis_alignment.png)]
 
