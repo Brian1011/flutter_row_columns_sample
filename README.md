@@ -57,7 +57,36 @@ Source code: [rows_spacer_flex_widget.dart](https://github.com/Brian1011/flutter
 ## Columns
 ### 1. Columns on main axis alignment (vertical)
 Column children can be aligned in the following ways:
-1. At the beginning of the column (MainAxisAlignment.start) This is the default arrangement of column items if no alignment is specified. Indicated by the 1st column in the image below.
+* At the beginning of the column (MainAxisAlignment.start) This is the default arrangement of column items if no alignment is specified. Indicated by the 1st column in the image below.
+* At the middle of the column (MainAxisAlignment.center). Indicated by the 2nd column in the image below.
+* Evenly spaced along the column (MainAxisAlignment.spaceEvenly). Indicated by the 3rd column in the image below.
+* At the end of the column (MainAxisAlignment.end). Indicated by the 4th column in the image below.
+
+[![Columns on main axis](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/images/column_main_axis_alignment.png)]
+
+Source code: [columns_main_axis_alignment.dart](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/lib/widgets/columns/column_main_axis_alignment_widget.dart)
+
+### 2. Columns with Expanded widgets
+The expanded widget is used to fill the available space in a row or column.
+
+Flex values are used to determine how much space each child occupies in the row or column.
+
+As shown below on the first column the expanded widget when applied to column children / widgets without flex specified all the children will occupy the same space.
+
+In the 2nd column the expanded widget is applied to all three children but with different flex values. The first child has a flex value of 1, the second child has a flex value of 2 and the third child has a flex value of 3.
+
+This means that the first child will occupy 1/6 of the available space, the second child will occupy 2/6 of the available space and the third child will occupy 3/6 of the available space.
+
+[![Columns with spacer and expanded widgets](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/images/column_expanded_flex.png)]
+
+Source code: [columns_expanded_flex_widget.dart](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/lib/widgets/columns/column_expanded_flex_widget.dart)
+
+### 3. Columns with Spacer widgets
+The spacer widget is used to fill the available space in a row or column. As show below the spacer widget will occupy the space between the first and last widgets in the column.
+
+[![Columns with spacer and expanded widgets](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/images/column_spacer_flex.png)]
+
+Source code: [columns_spacer_flex_widget.dart](https://github.com/Brian1011/flutter_row_columns_sample/blob/main/lib/widgets/columns/column_spacer_flex_widget.dart)
 
 ## How to run the project
 1. Clone the project
