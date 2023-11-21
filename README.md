@@ -94,3 +94,7 @@ Source code: [columns_spacer_flex_widget.dart](https://github.com/Brian1011/flut
 3. Run flutter pub get
 4. Run flutter run
 5. Enjoy!
+
+## Author
+* [Brian Mutinda](https://github.com/Brian1011/)
+* [Twitter](https://twitter.com/brian_1011_dev)
