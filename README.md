@@ -97,4 +97,4 @@ Source code: [columns_spacer_flex_widget.dart](https://github.com/Brian1011/flut
 
 ## Author
 * [Brian Mutinda](https://github.com/Brian1011/)
-* [Twitter](https://twitter.com/brian_1011_dev)
+* [Twitter - brian_1011_dev](https://twitter.com/brian_1011_dev)
